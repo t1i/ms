@@ -91,7 +91,6 @@ scpt.text=`
 }`;
 scpt.type='application/ld+json';
 document.head.append(scpt);
-iframe.src='//templatetoy.mrjaz.com/2021/?b='+iframe.title;
 window.onload=()=>{
       function adcode(njs,vid) {
         document.querySelectorAll(njs).forEach((ee) => {
