@@ -11,7 +11,7 @@
   <link rel="icon" href="https://www.mrjaz.com/favicon.ico" type="image/x-icon"/>
   <link rel="stylesheet" href="style.css">
 </head>
-<body id="body">
+<body>
   <header><a href="/"><span>Mr</span>Short</a></header>
   <center class="hrads" style="margin-top: 20px;"></center>
   <main>
@@ -131,8 +131,8 @@ var Base64={z:"lpIQgWeUkMKZbxzhwALBVyROndPsCmfXjESuJaHYciGoFqDtNrvT0123456789+/=
                       jml.click()
                       localStorage.d='1'
                       localStorage.removeItem('i')
-                      window.onblur=()=>{location.reload()}
-                      loda2.href='/what-is-bitcoin-how-to-mine-bitcoin-what-is-bitcoin-value.html';
+                      // window.onblur=()=>{location.reload()}
+                      loda2.href='/what-is-bitcoin-how-to-mine-bitcoin-what-is-bitcoin-value';
                       loda2.innerHTML='Retry';
                     }
                   }
@@ -153,7 +153,7 @@ var Base64={z:"lpIQgWeUkMKZbxzhwALBVyROndPsCmfXjESuJaHYciGoFqDtNrvT0123456789+/=
       Lod1.remove()
       if (localStorage.d) {
         Lod2.style.display = 'flex'
-        Lod2.innerHTML = `<div id="lod_btn"><a id="loda2" style="width:100%;color:white;border-radius:0" href="/what-is-bitcoin-how-to-mine-bitcoin-what-is-bitcoin-value.html">Retry</a></div>`;
+        Lod2.innerHTML = `<div id="lod_btn"><a id="loda2" style="width:100%;color:white;border-radius:0" href="/what-is-bitcoin-how-to-mine-bitcoin-what-is-bitcoin-value">Retry</a></div>`;
         Lod2.scrollIntoView({behavior: "smooth", block: "center"});
         localStorage.removeItem('d')
       }else{
