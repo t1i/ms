@@ -1,4 +1,5 @@
-    window.onload=()=>{
+canonical.href=location.href   
+window.onload=()=>{
       function adcode(njs,vid) {
         document.querySelectorAll(njs).forEach((ee) => {
           if (getComputedStyle(ee).display!='none') {
