@@ -9,6 +9,6 @@
           }
         })
       }
-      adcode('hrads','4437257043')
-      adcode('vrads','9174358269')
+      adcode('.hrads','4437257043')
+      adcode('.vrads','9174358269')
     }
