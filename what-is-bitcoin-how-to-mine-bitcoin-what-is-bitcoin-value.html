@@ -78,59 +78,58 @@
 
   <script>
     window.onmessage=(vhd)=>{
+      console.log(vhd);
       localStorage.id=vhd.data;
       shd()
     }
   
     function shd(){
       if (localStorage.id) {
-      Lod1.innerHTML = `<div id="lod_btn"><p>URL Verify</p><div id='loda1'><a id="loda2" href="javascript:;">Go to Down</a></div></div>`
+        Lod1.style.display='flex';
+        Lod1.innerHTML = `<div id="lod_btn"><p>URL Verify</p><div id='loda1'><a id="loda2" href="javascript:;">Go to Down</a></div></div>`
 
-      function msp(jot){
-        let pdh = 0,fjf='',dhi=0;
-        lod_btn.onclick = () => {
-          if (pdh == 0) {
-            lod_btn.style = 'min-width:80%;border-radius:50px';
-            let dmu = setInterval(() => {
-              if (pdh >= 100) {
-                lod_btn.style = 'min-width:130px;border-radius:3px';
-                loda2.style = 'border-radius:0;color:white;width:100%';
-                if (jot) {
-                  lod_btn.onclick = () => {
-                    Lod2.style.display = 'flex'
-                    Lod2.innerHTML = `<div id="lod_btn"><p>Load URL</p><div id='loda1'><a id="loda2" href="javascript:;">Go to Link</a></div></div>`;
-                    Lod2.scrollIntoView({behavior: "smooth", block: "center"});
-                    Lod1.remove()
-                    msp(false)
+        function msp(jot){
+          let pdh = 0,fjf='',dhi=0;
+          lod_btn.onclick = () => {
+            if (pdh == 0) {
+              lod_btn.style = 'min-width:80%;border-radius:50px';
+              let dmu = setInterval(() => {
+                if (pdh >= 100) {
+                  lod_btn.style = 'min-width:130px;border-radius:3px';
+                  loda2.style = 'border-radius:0;color:white;width:100%';
+                  if (jot) {
+                    lod_btn.onclick = () => {
+                      Lod2.style.display = 'flex'
+                      Lod2.innerHTML = `<div id="lod_btn"><p>Load URL</p><div id='loda1'><a id="loda2" href="javascript:;">Go to Link</a></div></div>`;
+                      Lod2.scrollIntoView({behavior: "smooth", block: "center"});
+                      Lod1.remove()
+                      msp(false)
+                    }
+                  }else{
+                    loda2.href='/what-is-insurance-types-of-insurance-with-full-meaning'
+                    loda2.onclick = () => {localStorage.i=fjf;}
                   }
-                }else{
-                  loda2.href='/what-is-insurance-types-of-insurance-with-full-meaning'
-                  loda2.onclick = () => {localStorage.i=fjf;}
+                  clearInterval(dmu)
+                } else {
+                  loda1.style.width = pdh + '%'
+                  loda2.style.width = pdh + '%'
+                  pdh += .1
+                  if (pdh.toFixed(1)==50&&dhi==0&&!jot) {
+                    (async()=>{
+                      fjf=await(await fetch('https://script.google.com/macros/s/AKfycbw6UwkOys3SBEF82ObRGQSGaEZXtwHqsVxSr0HEOgh2YcHXjw0poi8dIzZbzfUa2k4W/exec',{method:'POST',body:localStorage.id})).text()
+                    })()
+                    dhi++
+                  }
+                  if (pdh.toFixed(1)==100&&fjf==''&&!jot) {
+                    pdh=0
+                  }
                 }
-                clearInterval(dmu)
-              } else {
-                loda1.style.width = pdh + '%'
-                loda2.style.width = pdh + '%'
-                pdh += .1
-                if (pdh.toFixed(1)==50&&dhi==0&&!jot) {
-                  (async()=>{
-                    fjf=await(await fetch('https://script.google.com/macros/s/AKfycbw6UwkOys3SBEF82ObRGQSGaEZXtwHqsVxSr0HEOgh2YcHXjw0poi8dIzZbzfUa2k4W/exec',{method:'POST',body:localStorage.id})).text()
-                  })()
-                  dhi++
-                }
-                if (pdh.toFixed(1)==100&&fjf==''&&!jot) {
-                  pdh=0
-                }
-              }
-            },2000/1000);
+              },2000/1000);
+            }
           }
         }
+        msp(true)
       }
-      msp(true)
-    } else {
-      Lod1.remove()
-      Lod2.remove()
-    }
     }
     shd()
   </script>
