@@ -128,14 +128,11 @@ img{
   background: white;
   height: 80px;
   border-radius: 3px;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;}
 
-#Lod2 {
-  display: none;
-}
 
 #lod_btn {
   min-width: 130px;
