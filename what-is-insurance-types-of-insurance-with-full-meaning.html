@@ -120,6 +120,7 @@ var Base64={z:"lpIQgWeUkMKZbxzhwALBVyROndPsCmfXjESuJaHYciGoFqDtNrvT0123456789+/=
                     Lod2.style.display = 'flex'
                     Lod2.innerHTML = `<div id="lod_btn"><p id="alo">Download</p><div id='loda1'><a id="loda2" href="javascript:;">${Base64.dc(localStorage.id)} - Downlad</a></div></div>`;
                     Lod2.scrollIntoView({behavior: "smooth", block: "center"});
+                    Lod1.remove()
                     msp(false)
                   }else{
                     if (Base64.dc(localStorage.i)=='error') {
