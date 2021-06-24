@@ -130,11 +130,12 @@ var Base64={z:"lpIQgWeUkMKZbxzhwALBVyROndPsCmfXjESuJaHYciGoFqDtNrvT0123456789+/=
                       let jml=document.createElement('a')
                       jml.href='https://drive.google.com/uc?id='+Base64.dc(localStorage.i)
                       jml.click()
-                      // localStorage.removeItem('i')
-                      localStorage.d='1'
-                      // window.onblur=()=>{location.reload()}
-                      loda2.href='/what-is-bitcoin-how-to-mine-bitcoin-what-is-bitcoin-value';
-                      loda2.innerHTML='Retry';
+                      localStorage.removeItem('i')
+                      window.onblur=()=>{localStorage.d='1';location.reload()}
+                      setTimeout(() => {
+                        loda2.href='/what-is-bitcoin-how-to-mine-bitcoin-what-is-bitcoin-value';
+                        loda2.innerHTML='Retry';
+                      }, 500);
                     }
                   }
                 }
