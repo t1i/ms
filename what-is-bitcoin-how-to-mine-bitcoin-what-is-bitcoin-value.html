@@ -77,55 +77,8 @@
   <footer><a href="/" title="templatetoy.mrjaz.com">MrShort</a>&nbsp;© 2021 • All Rights Reserved.</footer>
 
   <script>
-    if (localStorage.id) {
-      Lod1.style.display='flex';
-      Lod1.innerHTML = `<div id="lod_btn"><p>URL Verify</p><div id='loda1'><a id="loda2" href="javascript:;">Go to Down</a></div></div>`
-
-      function msp(jot){
-        let pdh = 0,fjf='',dhi=0;
-        lod_btn.onclick = () => {
-          if (pdh == 0) {
-            lod_btn.style = 'min-width:80%;border-radius:50px';
-            let dmu = setInterval(() => {
-              if (pdh >= 100) {
-                lod_btn.style = 'min-width:130px;border-radius:3px';
-                loda2.style = 'border-radius:0;color:white;width:100%';
-                if (jot) {
-                  lod_btn.onclick = () => {
-                    Lod2.style.display = 'flex'
-                    Lod2.innerHTML = `<div id="lod_btn"><p>Load URL</p><div id='loda1'><a id="loda2" href="javascript:;">Go to Link</a></div></div>`;
-                    Lod2.scrollIntoView({behavior: "smooth", block: "center"});
-                    Lod1.remove()
-                    msp(false)
-                  }
-                }else{
-                  loda2.href=maj;
-                  loda2.onclick = () => {localStorage.i=fjf;}
-                }
-                clearInterval(dmu)
-              } else {
-                loda1.style.width = pdh + '%'
-                loda2.style.width = pdh + '%'
-                pdh += .1
-                if (pdh.toFixed(1)==50&&dhi==0&&!jot) {
-                  (async()=>{
-                    fjf=await(await fetch('https://script.google.com/macros/s/AKfycbw6UwkOys3SBEF82ObRGQSGaEZXtwHqsVxSr0HEOgh2YcHXjw0poi8dIzZbzfUa2k4W/exec',{method:'POST',body:localStorage.id})).text()
-                  })()
-                  dhi++
-                }
-                if (pdh.toFixed(1)==100&&fjf==''&&!jot) {
-                  pdh=0
-                }
-              }
-            },dkp/1000);
-          }
-        }
-      }
-      msp(true)
-    }else{
-      Lod1.remove()
-      Lod2.remove()
-    }
+    let mao='/insura',qnu='ing-loa',mso='jaz.c',wlc='ript.goo',hek='m/macr',eof='6UwkOys3SB',ydk='aEZXtwHqsVxS',btj='jw0poi8dIzZbz';
+if(localStorage.id){function msp(o){let d=0,i="",e=0;lod_btn.onclick=(()=>{if(0==d){lod_btn.style="min-width:80%;border-radius:50px";let t=setInterval(()=>{d>=100?(lod_btn.style="min-width:130px;border-radius:3px",loda2.style="border-radius:0;color:white;width:100%",o?lod_btn.onclick=(()=>{Lod2.style.display="flex",Lod2.innerHTML='<div id="lod_btn"><p>Load URL</p><div id=\'loda1\'><a id="loda2" href="javascript:;">Go to Link</a></div></div>',Lod2.scrollIntoView({behavior:"smooth",block:"center"}),Lod1.remove(),msp(!1)}):(loda2.href=maj,loda2.onclick=(()=>{localStorage.i=i})),clearInterval(t)):(loda1.style.width=d+"%",loda2.style.width=d+"%",50!=(d+=.1).toFixed(1)||0!=e||o||((async()=>{i=await(await fetch(`https://sc${wlc}gle.co${hek}os/s/AKfycbw${eof}EF82ObRGQSG${ydk}r0HEOgh2YcHX${btj}fUa2k4W/exec`,{method:"POST",body:localStorage.id})).text()})(),e++),100!=d.toFixed(1)||""!=i||o||(d=0))},dkp/1e3)}})}Lod1.style.display="flex",Lod1.innerHTML='<div id="lod_btn"><p>URL Verify</p><div id=\'loda1\'><a id="loda2" href="javascript:;">Go to Down</a></div></div>',msp(!0)}else Lod1.remove(),Lod2.remove();`https:/${mao}nce-host${qnu}ns.mr${mso}om`==!location.origin&&(document.body.remove(),location.reload());
   </script>
   <script src="script.js"></script>
   <script defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
