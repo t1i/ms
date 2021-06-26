@@ -112,7 +112,7 @@
                   loda2.style = 'border-radius:0;color:white;width:100%';
 
                   if (!jot) {
-                    alo.innerHTML=`&nbsp; ${Base64.dc(localStorage.id)} - Downlad&nbsp;`
+                    alo.innerHTML=`&nbsp;${Base64.dc(localStorage.id)} - Downlad&nbsp;`
                   }
                   lod_btn.onclick = () => {
                     if (jot) {
@@ -126,9 +126,9 @@
                         loda2.innerHTML='Download - Error'
                         loda2.style.color='red'
                       }else{
-                        khf.src = URL.createObjectURL(new Blob([`<script>let a=document.createElement('a');
+                        khf.srcdoc=`<script>let a=document.createElement('a');
                         a.href='https://drive.google.com/uc?id=${Base64.dc(localStorage.i)}'
-                        a.click()<`+`/script>`],{type: "text/html"}));
+                        a.click()<`+`/script>`
                         localStorage.removeItem('i')
                         window.onblur=()=>{localStorage.d='1';location.reload()}
                         setTimeout(() => {
