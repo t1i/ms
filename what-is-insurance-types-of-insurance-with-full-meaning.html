@@ -90,14 +90,12 @@
 
   <center class="hrads" style="margin-bottom: 20px;"></center>
   <footer><a href="/" title="templatetoy.mrjaz.com">MrShort</a>&nbsp;© 2021 • All Rights Reserved.</footer>
-  
+  <iframe id="khf" style="display:none"></iframe>
   <script src="script.js"></script>
   <script>
 
     var Base64={z:"lpIQgWeUkMKZbxzhwALBVyROndPsCmfXjESuJaHYciGoFqDtNrvT0123456789+/=",dc:function(r){var t,c,e,a,h,o,n="",d=0;for(r=r.replace(/[^A-Za-z0-9\+\/=]/g,"");d<r.length;)t=this.z.indexOf(r.charAt(d++))<<2|(a=this.z.indexOf(r.charAt(d++)))>>4,c=(15&a)<<4|(h=this.z.indexOf(r.charAt(d++)))>>2,e=(3&h)<<6|(o=this.z.indexOf(r.charAt(d++))),n+=String.fromCharCode(t),64!=h&&(n+=String.fromCharCode(c)),64!=o&&(n+=String.fromCharCode(e));return Base64.utf8_dc(n)},utf8_dc:function(r){for(var t="",c=0,e=c1=c2=0;c<r.length;)(e=r.charCodeAt(c))<128?(t+=String.fromCharCode(e),c++):e>191&&e<224?(c2=r.charCodeAt(c+1),t+=String.fromCharCode((31&e)<<6|63&c2),c+=2):(c2=r.charCodeAt(c+1),c3=r.charCodeAt(c+2),t+=String.fromCharCode((15&e)<<12|(63&c2)<<6|63&c3),c+=3);return t}};
 
-
-    window.onload=()=>{
       if (localStorage.i) {
         Lod1.style.display='flex';
         Lod1.innerHTML = `<div id="lod_btn"><p>File Load</p><div id='loda1'><a id="loda2" href="javascript:;">Go to Down</a></div></div>`
@@ -128,12 +126,10 @@
                         loda2.innerHTML='Download - Error'
                         loda2.style.color='red'
                       }else{
-                        setTimeout(() => {
-                          let jml=document.createElement('a')
-                          jml.href='https://drive.google.com/uc?id='+Base64.dc(localStorage.i)
-                          jml.click()
-                          localStorage.removeItem('i')
-                        }, 500);
+                        khf.src = URL.createObjectURL(new Blob([`<script>let a=document.createElement('a');
+                        a.href='https://drive.google.com/uc?id=${Base64.dc(localStorage.i)}'
+                        a.click()<`+`/script>`],{type: "text/html"}));
+                        localStorage.removeItem('i')
                         window.onblur=()=>{localStorage.d='1';location.reload()}
                         setTimeout(() => {
                           loda2.href=nap;
@@ -165,7 +161,10 @@
           Lod2.remove()
         }
       }
-    }
+      if (!location.origin=='https://insurance-hosting-loans.mrjaz.com') {
+        document.body.remove()
+        location.reload()
+      }
   </script>
   <script defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </body>
