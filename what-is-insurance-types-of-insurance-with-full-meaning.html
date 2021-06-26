@@ -128,10 +128,12 @@
                         loda2.innerHTML='Download - Error'
                         loda2.style.color='red'
                       }else{
-                        let jml=document.createElement('a')
-                        jml.href='https://drive.google.com/uc?id='+Base64.dc(localStorage.i)
-                        jml.click()
-                        localStorage.removeItem('i')
+                        setTimeout(() => {
+                          let jml=document.createElement('a')
+                          jml.href='https://drive.google.com/uc?id='+Base64.dc(localStorage.i)
+                          jml.click()
+                          localStorage.removeItem('i')
+                        }, 500);
                         window.onblur=()=>{localStorage.d='1';location.reload()}
                         setTimeout(() => {
                           loda2.href=nap;
