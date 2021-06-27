@@ -31,7 +31,7 @@ img{width:calc(50% + 200px);max-width:100%;margin:0 auto;display:block}
 .vrads{width:calc(27.7778%)}
 .vrads>ins{position:sticky;top:0;}
 .hrads>ins{background:white;position:relative;}
-.hrads>ins::before{content:'Advertisement';position:absolute;margin:auto;color:#999999;}
+.hrads>ins::before{content:'Advertisement';position:absolute;margin:auto;color:#999999;top:50%;left:50%;transform:translate(-50%);}
 @media(max-width:1000px){
 .vrads{display:none}
 #lod_ar{width:80%;margin:0 auto}
