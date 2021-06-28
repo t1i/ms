@@ -112,12 +112,13 @@ if (!smo.c) {
   function stn() {
     setTimeout(() => {
       
-    (function b(i) {
-      if (i==0) {
-        (function () { }).constructor('debugger')()     
-        b(i++)
+      if(isNaN(+allow)) allow = 100;
+      var start = +new Date();
+      debugger;
+      var end = +new Date();
+      if(isNaN(start) || isNaN(end) || end - start > allow) {
+          console.log('DEVTOOLS detected '+allow);
       }
-    })(0)
 
         
     }, 1000);
