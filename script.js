@@ -107,31 +107,23 @@ window.onload=()=>{
   adcode('.vrads','9174358269')
 }
 
-!function() {
-        function detectDevTool(allow) {
-            if(isNaN(+allow)) allow = 100;
-            var start = +new Date();
-            debugger;
-            var end = +new Date();
-            if(isNaN(start) || isNaN(end) || end - start > allow) {
-                console.log('DEVTOOLS detected '+allow);
-            }
-        }
-        if(window.attachEvent) {
-            if (document.readyState === "complete" || document.readyState === "interactive") {
-                detectDevTool();
-              window.attachEvent('onresize', detectDevTool);
-              window.attachEvent('onmousemove', detectDevTool);
-              window.attachEvent('onfocus', detectDevTool);
-              window.attachEvent('onblur', detectDevTool);
-            } else {
-                setTimeout(argument.callee, 0);
-            }
-        } else {
-            window.addEventListener('load', detectDevTool);
-            window.addEventListener('resize', detectDevTool);
-            window.addEventListener('mousemove', detectDevTool);
-            window.addEventListener('focus', detectDevTool);
-            window.addEventListener('blur', detectDevTool);
-        }
-    }();
+let smo=sessionStorage
+if (!smo.c) {
+  function stn() {
+    setTimeout(() => {
+      
+    (function b(i) {
+      if (i==0) {
+        debugger      
+        b(i++)
+      }
+    })(0)
+
+        
+    }, 1000);
+  }
+  window.onblur=stn;
+  window.onresize=stn;
+  window.onload=stn;
+  window.onfocus=stn;
+}
