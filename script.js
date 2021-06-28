@@ -109,7 +109,7 @@ window.onload=()=>{
 
 let smo=sessionStorage
 if (!smo.c) {
-  function stn() {
+  function stn(allow) {
     setTimeout(() => {
       
       if(isNaN(+allow)) allow = 100;
