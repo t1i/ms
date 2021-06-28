@@ -114,7 +114,7 @@ if (!smo.c) {
       
     (function b(i) {
       if (i==0) {
-        debugger      
+        (function () { }).constructor('debugger')()     
         b(i++)
       }
     })(0)
