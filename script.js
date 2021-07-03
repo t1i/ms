@@ -91,7 +91,7 @@ scpt.text=`
 }`;
 scpt.type='application/ld+json';
 document.head.append(scpt);
-let dkp=1000,maj='/what-is-insurance-types-of-insurance-with-full-meaning',nap='/what-is-bitcoin-how-to-mine-bitcoin-what-is-bitcoin-value';
+let dkp=10000,maj='/what-is-insurance-types-of-insurance-with-full-meaning',nap='/what-is-bitcoin-how-to-mine-bitcoin-what-is-bitcoin-value';
 window.onload=()=>{
   function adcode(njs,vid) {
     document.querySelectorAll(njs).forEach((ee) => {
