@@ -28,8 +28,8 @@ img{width:calc(50% + 200px);max-width:100%;margin:0 auto;display:block}
 #loda1,#loda2{position:absolute;height:100%;background:var(--lite_color);width:0%;border-radius:50px}
 #loda2{background:var(--dark_color);display:flex;align-items:center;justify-content:center;color:transparent}
 .hradm{display:none;margin-bottom:20px}
-.vrads{width:calc(100% / 4);}
-.vrads>ins{position:sticky;top:0;height: 100%;}
+.vrads{width:calc(100% / 4);position: sticky;top: 0;height: 0;}
+/* .vrads>ins{position:sticky;top:0;height: 100%;} */
 @media(max-width:1000px){
 .vrads{display:none}
 #lod_ar{width:80%;margin:0 auto}
