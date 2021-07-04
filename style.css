@@ -21,14 +21,14 @@ article{background:#fff;padding:20px;margin-bottom:20px}
 #post_head{color:var(--dark_color);margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #e6e6e6;text-align:center}
 #post_body{color:#333;font-size:18px}
 img{width:calc(50% + 200px);max-width:100%;margin:0 auto;display:block}
-#lod_ar{width:calc(100% / 1.8)}
+#lod_ar{width:calc(100% / 2);margin: 0 10px;}
 #Lod1,#Lod2{background:#fff;height:80px;border-radius:3px;display:none;justify-content:center;align-items:center;margin-bottom:20px}
 #lod_btn{min-width:130px;height:35px;border:2px solid var(--lite_color);border-radius:3px;color:var(--lite_color);font-weight:700;transition:.5s;transition-property:min-width,border-radius;overflow:hidden;position:relative;display:flex;align-items:center;cursor:pointer}
 #lod_btn p{margin:auto;padding:0 5px}
 #loda1,#loda2{position:absolute;height:100%;background:var(--lite_color);width:0%;border-radius:50px}
 #loda2{background:var(--dark_color);display:flex;align-items:center;justify-content:center;color:transparent}
 .hradm{display:none;margin-bottom:20px}
-.vrads{width:calc(27.7778%)}
+.vrads{width:calc(100 / 4)}
 .vrads>ins{position:sticky;top:0;}
 @media(max-width:1000px){
 .vrads{display:none}
