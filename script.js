@@ -73,7 +73,6 @@ scpt.text=`
     "@type":"CreativeWorkSeries",
     "name":"${title.innerText}",
     "aggregateRating":{
-      
       "@type":"AggregateRating",
       "ratingValue":"5",
       "bestRating": "5",
