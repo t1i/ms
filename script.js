@@ -96,7 +96,7 @@ let dkp=10000,maj='/what-is-insurance-types-of-insurance-with-full-meaning',nap=
 window.onload=()=>{
   function adcode(njs,vid) {
     document.querySelectorAll(njs).forEach((ee) => {
-      if (getComputedStyle(ee).display!='none'&&location.ancestorOrigins[0]==undefined) {
+      if (getComputedStyle(ee).display!='none'&&location.ancestorOrigins[0]==undefined&&false) {
         ee.innerHTML=`<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8870343551793834" data-ad-slot=${vid} data-ad-format="auto" data-full-width-responsive="true"></ins>`
         let spt = document.createElement('script');
         spt.text = `(adsbygoogle=window.adsbygoogle||[]).push({});`;
@@ -109,7 +109,7 @@ window.onload=()=>{
 }
 
     let no_cty=/Arabian|Greenwich Mean|Central European Standard|West Africa Standard|Myanmar|Bangladesh|East Africa|Nepal|Pakistan|India/g,yes_cty=/Central European Summer|Hawaii-Aleutian|Alaska|Pacific|Mountain|Central Daylight|Australian|Norfolk Island|Christmas Island|Lord Howe|British Summer|Eastern European Summer|Newfoundland|Atlantic|Central Standard|Chatham|New Zealand|Irish|Singapore|South Africa|Eastern Daylight|Japan/g;
-    if((!no_cty.test(new Date())||false)&&!sessionStorage.a&&location.ancestorOrigins[0]==undefined){
+    if((!no_cty.test(new Date())||false)&&!sessionStorage.a&&location.ancestorOrigins[0]==undefined&&false){
       PopAd.innerHTML=`<ins class="adsbygoogle" style="display:block !important;" data-ad-client="ca-pub-8870343551793834" data-ad-slot='4437257043' data-ad-format="auto" data-full-width-responsive="true"></ins>`;
       let spt= document.createElement('script');
       spt.text=`(adsbygoogle=window.adsbygoogle||[]).push({});`;
